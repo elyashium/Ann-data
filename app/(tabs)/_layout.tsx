@@ -2,7 +2,7 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { useColorScheme } from '@/hooks/useColorScheme';
+
 
 
 export default function TabLayout() {
@@ -18,11 +18,11 @@ export default function TabLayout() {
         },
         tabBarActiveTintColor: "#001700",
         tabBarInactiveTintColor: '#ffffff',
-        tabBarActiveBackgroundColor: '#74d678',
+        // tabBarActiveBackgroundColor: '#',
 
-        // tabBarItemStyle: {
-        //   borderRadius: 10, // Optional: rounded corners
-        // },
+        tabBarItemStyle: {
+          borderRadius: 10, // Optional: rounded corners
+        },
         headerShown: false,
       }}>
 
