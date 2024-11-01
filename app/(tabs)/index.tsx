@@ -23,19 +23,19 @@ export default function index() {
 
 const styles = StyleSheet.create({
 
-  container: {
-    flex: 1,
+  container :{
+    flex :1,
     flexDirection: "column",
-
+    backgroundColor: "#fffff"
   },
   bg: {
     flex: 1,
     width: '100%',
     height: '100%',
     opacity: 0.35,
-    justifyContent: 'center',
-
+    justifyContent:'center',
+    backgroundColor: "#fffff",
 
   }
-
+  
 })
