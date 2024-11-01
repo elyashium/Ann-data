@@ -1,16 +1,25 @@
-import { Text, StyleSheet, ImageBackground, View, ScrollView, Pressable } from "react-native";
+import { Text, StyleSheet, ImageBackground, View, ScrollView, Pressable, Image } from "react-native";
 
 export default function index() {
   return (
     <View style={styles.container}>
       <ImageBackground
         style={styles.bg}
-        source={require("./bg.png")}
+        source={require("./images/bg.png")}
         resizeMode="cover"
       >
         <ScrollView contentContainerStyle={styles.scrollContainer}>
+
+          {/* {top half} */}
           <View style={styles.topHalf}>
-            <Text style={styles.welcomeText}>Welcome</Text>
+            <Image
+              source={require("./images/mic.png")}
+              resizeMode="cover"
+              style={styles.mic}
+            >
+
+
+            </Image>
           </View>
 
           <View style={styles.bottomHalf}>
@@ -59,11 +68,18 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-    opacity: 0.45,
+
   },
   scrollContainer: {
     flexGrow: 1,
   },
+  mic: {
+
+    width: 300,
+    height: 300,
+    top: 40,
+  },
+
   topHalf: {
     height: 450, // Fixed height for top section
     justifyContent: 'center',
@@ -77,7 +93,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     overflow: 'hidden',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     paddingTop: 20,
   },
   boxContainer: {
