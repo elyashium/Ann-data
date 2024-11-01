@@ -1,25 +1,41 @@
-import { Text, StyleSheet, ImageBackground } from "react-native";
-import Svg, { Path } from "react-native-svg"
+import { Text, StyleSheet, ImageBackground, View } from "react-native";
 // import { SafeAreaView } from "react-native-safe-area-context";
 
 
 export default function index() {
-  return (
-    <ImageBackground
-      style={styles.bg}
-      source={require("../assets/images/bg.svg")}
-      resizeMode="cover"
-    >
+  return (<>
+    <View style={styles.container}>
 
-    </ImageBackground>
+      <ImageBackground
+
+        style={styles.bg}
+        source={require("./bg.png")}
+        resizeMode="cover"
+
+      >
+
+      </ImageBackground>
+
+    </View>
+  </>
   )
 }
 
 const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    flexDirection: "column",
+
+  },
   bg: {
     flex: 1,
     width: '100%',
     height: '100%',
+    opacity: 0.35,
+    justifyContent: 'center',
+
 
   }
+
 })
