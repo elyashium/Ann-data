@@ -1,13 +1,14 @@
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 export default function profile() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>
         profile page
       </Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
