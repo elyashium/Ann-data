@@ -1,6 +1,6 @@
 import { Text, StyleSheet, ImageBackground, View, ScrollView, Pressable } from "react-native";
 
-export default function HomeScreen() {
+export default function index() {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -8,51 +8,44 @@ export default function HomeScreen() {
         source={require("./bg.png")}
         resizeMode="cover"
       >
-
-        <View style={styles.topHalf}>
-          <Text >Welcome</Text>
-        </View>
-
-        <View style={styles.bottomHalf}>
-
-          <View >
-            <Pressable
-              style={[styles.box, { backgroundColor: '#C9791C' }]}
-              onPress={() => alert('Pressed Feature 1')}
-            >
-              <Text style={styles.boxText}>Live-Mandi prices</Text>
-            </Pressable>
-
-
-            <Pressable
-              style={[styles.box, { backgroundColor: "#2A3770" }]}
-              onPress={() => alert('Pressed Feature 2')}
-            >
-              <Text style={styles.boxText}>Crop Disease Protection</Text>
-            </Pressable>
-
-            <Pressable
-              style={[styles.box, { backgroundColor: '#C9B51C' }]}
-              onPress={() => alert('Pressed Feature 3')}
-            >
-              <Text style={styles.boxText}>Weather Forecast</Text>
-            </Pressable>
-
-            <Pressable
-              style={[styles.box, { backgroundColor: '#F6787A' }]}
-              onPress={() => alert('Pressed Feature 3')}
-            >
-              <Text style={styles.boxText}>Best Practices</Text>
-            </Pressable>
-
-
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.topHalf}>
+            <Text style={styles.welcomeText}>Welcome</Text>
           </View>
-        </View>
 
+          <View style={styles.bottomHalf}>
+            <View style={styles.boxContainer}>
+              <Pressable
+                style={[styles.box, { backgroundColor: '#C9791C' }]}
+                onPress={() => alert('Pressed Feature 1')}
+              >
+                <Text style={styles.boxText}>Live-Mandi prices</Text>
+              </Pressable>
+
+              <Pressable
+                style={[styles.box, { backgroundColor: "#2A3770" }]}
+                onPress={() => alert('Pressed Feature 2')}
+              >
+                <Text style={styles.boxText}>Crop Disease Protection</Text>
+              </Pressable>
+
+              <Pressable
+                style={[styles.box, { backgroundColor: '#C9B51C' }]}
+                onPress={() => alert('Pressed Feature 3')}
+              >
+                <Text style={styles.boxText}>Weather Forecast</Text>
+              </Pressable>
+
+              <Pressable
+                style={[styles.box, { backgroundColor: '#F6787A' }]}
+                onPress={() => alert('Pressed Feature 4')}
+              >
+                <Text style={styles.boxText}>Best Practices</Text>
+              </Pressable>
+            </View>
+          </View>
+        </ScrollView>
       </ImageBackground>
-
-
-
     </View>
   );
 }
@@ -60,45 +53,47 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
     backgroundColor: '#FFFFFF'
   },
   bg: {
     flex: 1,
     width: '100%',
     height: '100%',
-    opacity: 0.35,
+    opacity: 0.45,
   },
-
+  scrollContainer: {
+    flexGrow: 1,
+  },
   topHalf: {
-    flex: 1,
+    height: 450, // Fixed height for top section
     justifyContent: 'center',
     alignItems: 'center',
   },
-
+  welcomeText: {
+    fontSize: 32,
+    fontWeight: 'bold',
+  },
   bottomHalf: {
-    flex: 1,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     overflow: 'hidden',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    paddingTop: 20,
   },
-
-  scrollContent: {
-    paddingVertical: 20,
-    paddingHorizontal: 16,
+  boxContainer: {
+    padding: 10,
   },
   box: {
-
-    padding: 20,
+    padding: 15,
     margin: 10,
     borderRadius: 10,
     height: 200,
-
-
+    justifyContent: 'center', // Center the text vertically
   },
   boxText: {
     fontSize: 18,
     textAlign: 'center',
-    color: "#FFFFF"
+    color: "#FFFFFF", // Fixed the color value
+    fontWeight: '600',
   }
 });
