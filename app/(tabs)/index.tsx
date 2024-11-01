@@ -1,4 +1,5 @@
 import { Text, StyleSheet, ImageBackground } from "react-native";
+import Svg, { Path } from "react-native-svg"
 // import { SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -6,7 +7,7 @@ export default function index() {
   return (
     <ImageBackground
       style={styles.bg}
-      source={require("../assets/images/bg.svg'")}
+      source={require("../assets/images/bg.svg")}
       resizeMode="cover"
     >
 
