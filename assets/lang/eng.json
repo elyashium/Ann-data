@@ -1,0 +1,55 @@
+{
+    "featureScreen": {
+        
+        "ML": {
+            "title": " Crop Disease Detection",
+            "para": "Scan your crops to identify diseases and get solutions"
+        },
+
+        "weather": {
+            "title": "Personalised Weather",
+            "para": "Get precise weather updates for your farm location"
+        },
+
+        "mandi": {
+            "title": "Live-Mandi prices",
+            "para": "Real time updates on crop prices from local market"
+        },
+
+        "more" : {
+            "title" : "More Features",
+            "para" : "Crop advisory and more"
+        }
+    },
+
+    "getStarted" : "Get Started",
+
+    "bottomBar" :{
+        "home" : "Home",
+        "profile" : "Profile"
+    },
+
+    "featureBox" : {
+
+        "ML": {
+            "title": "Crop Disease Detection",
+            "para": "Scan your crops to identify diseases and get solutions"
+        },
+
+        "weather": {
+            "title": "Weather-Forecast",
+            "para": "Get precise weather updates for your farm location"
+        },
+
+        "mandi": {
+            "title": "Live-Mandi prices",
+            "para": "Real time updates on crop prices from local market"
+        },
+
+        "more" : {
+            "title" : "Guidelines-Best practices",
+            "para" : "Crop advisory and more"
+        }
+
+    }
+}
